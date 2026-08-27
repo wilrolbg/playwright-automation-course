@@ -1,0 +1,31 @@
+{
+    "homePage":
+    {
+        "urlHomePage": "/"
+    },
+    "Login":
+    {
+        "urlLogin" : "/auth/login",
+        "failedUserCredentials": {
+            "badEmailFormated": "wbecerragmail.com",
+            "badPasswd": "123456",
+            "invalidEmail": "ncolmenares@gmail.com",
+            "emptyEmail": "",
+            "emptyPasswd": ""
+        },
+        "failedMessages": {
+            "requiredEmail": "Email is required",
+            "requiredPasswd": "Password is required",
+            "badFormatEmail": "Email format is invalid",
+            "invalidLogin": "Invalid email or password"
+        }
+    },
+    "Dashboard": 
+    {
+        "adminUser": {
+            "url": "/admin/dashboard",
+            "tittelDashboard": "Sales over the years",
+            "orderListTittle": "Latest orders"
+        }
+    }
+}
