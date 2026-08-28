@@ -22,8 +22,8 @@ test.describe('Pruebas de Inicio de Sesion', () => {
         await authAssertions.assertAtUrl(vdata.Login.urlLogin);
         await login.login(user, passwd);
         await authAssertions.assertAtUrl(vdata.Dashboard.adminUser.url);
-        //await authAssertions.assertAtTittelDashboard(vdata.Dashboard.adminUser.tittelDashboard);
-        //await authAssertions.assertAtTittelDashboard(vdata.Dashboard.adminUser.orderListTittle);
+        await authAssertions.assertAtTittelDashboard(vdata.Dashboard.adminUser.tittelDashboard);
+        await authAssertions.assertAtTittelDashboard(vdata.Dashboard.adminUser.orderListTittle);
     });
     
     test('Validar que los campos email y password no permitan valores vacios', async ({page}) => { 
