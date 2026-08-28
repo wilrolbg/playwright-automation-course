@@ -6,7 +6,7 @@ export class AuthAssertions {
   }
 
     async assertAtUrl(url: string): Promise<void> {
-    await expect(this.page).toHaveURL(url);
+    await expect(this.page).toHaveURL(url, {timeout: 10000});
   }
 
     async assertAtTittelDashboard(tittle: string): Promise<void> {

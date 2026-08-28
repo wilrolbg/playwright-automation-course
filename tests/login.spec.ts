@@ -1,4 +1,4 @@
-import { test, expect, Page } from '@playwright/test';
+import { test} from '@playwright/test';
 import { LoginPage } from "../pages/LoginPage";
 import { AuthAssertions } from "../assertions/AuthAssertions";
 import users from "../data/credentials.json";
