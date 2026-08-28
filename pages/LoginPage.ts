@@ -24,6 +24,7 @@ export class LoginPage {
     async login(email: string, password: string){        
         await this.emailInput.fill(email);
         await this.passwordInput.fill(password);
-        await this.loginButton.click();        
+        await this.loginButton.click();
+        await this.page.waitForLoadState('networkidle'); //espere a que termine la carga después del click        
     }
 }
