@@ -25,8 +25,5 @@ export class LoginPage {
         await this.emailInput.fill(email);
         await this.passwordInput.fill(password);
         await this.loginButton.click();
-        console.log('URL después del click:', this.page.url());
-        await this.page.waitForLoadState('networkidle'); //espere a que termine la carga después del click   
-        console.log('URL después networkidle:', this.page.url());     
     }
 }

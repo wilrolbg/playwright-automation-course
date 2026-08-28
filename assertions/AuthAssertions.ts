@@ -10,7 +10,9 @@ export class AuthAssertions {
   }
 
     async assertAtTittelDashboard(tittle: string): Promise<void> {
-    await expect(this.page.getByText(tittle)).toBeVisible();
+     console.log(await this.page.locator('body').innerText()); //verifica el contenido de la pagina
+
+    await expect(this.page.getByText(tittle, {exact: true})).toBeVisible();
   }
 
     async assertAtFailedMsg(message: string): Promise<void> {
