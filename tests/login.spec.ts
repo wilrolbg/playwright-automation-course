@@ -47,4 +47,14 @@ test.describe('Pruebas de Inicio de Sesion', () => {
         await login.login(vdata.Login.failedUserCredentials.invalidEmail, vdata.Login.failedUserCredentials.badPasswd);
         await authAssertions.assertAtFailedMsg(vdata.Login.failedMessages.invalidLogin);
      })
+
+     test('Validar Sign Out', async ({page}) => { 
+        await login.openAuth(); // Abre la página y hace clic en Sign In
+        await authAssertions.assertAtUrl(vdata.Login.urlLogin);
+        await login.login(user, passwd);
+        await authAssertions.assertAtUrl(vdata.Dashboard.adminUser.url);
+        await login.logout();
+        await authAssertions.assertAtUrl(vdata.Login.urlLogin);
+        await authAssertions.assertAtLogOut();
+      })
 });
