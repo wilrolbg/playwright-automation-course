@@ -27,5 +27,9 @@
             "tittelDashboard": "Sales over the years",
             "orderListTittle": "Latest orders"
         }
+    },
+    "Contact":
+    {
+        "messageSuccess": "Thanks for your message! We will contact you shortly."
     }
 }
