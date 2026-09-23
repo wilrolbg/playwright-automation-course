@@ -21,6 +21,7 @@ test('Enviar mensaje mediante el formulario de contacto', async ({ page, selectR
   const contactPage = new ContactPage(page);
   await contactPage.openContactPage();
   const valorSeleccionado = await contactPage.readSelector(selectRandomOption); //Se selecciona el valor de la lista desplegable utilizando el fixture de dropdownlist
+  
   await contactPage.fillContactForm(
     forms_data.Contact.firstName,
     forms_data.Contact.LastName,
