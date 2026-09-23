@@ -7,4 +7,12 @@ export class ContactAssertions {
     async assertSuccessMsg(message: string): Promise<void> {
     await expect(this.page.getByText(message)).toBeVisible();
   }  
+  
+  async assertValidationError(message: string): Promise<void> {
+    await expect(this.page.getByText(message)).toBeVisible();
+  }
+
+  async assertValidationVisibleBySelector(selector: string): Promise<void> {
+    await expect(this.page.locator(selector)).toBeVisible();
+  }
 }
